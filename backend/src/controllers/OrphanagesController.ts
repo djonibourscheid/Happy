@@ -13,6 +13,17 @@ export default {
     return res.json(orphanages);
   },
 
+  // Detalhes de um orfanato
+  async show(req: Request, res: Response) {
+    const { id } = req.params;
+
+    const orphanagesRepository = getRepository(Orphanage);
+    
+    const orphanage = await orphanagesRepository.findOneOrFail(id);
+
+    return res.json(orphanage);
+  },
+
   // Criar um orfanato
   async create(req: Request, res: Response) {
     // pegando os dados separadamente
