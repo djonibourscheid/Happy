@@ -4,6 +4,15 @@ import Orphanage from '../models/Orphanages';
 
 
 export default {
+  // Listando todos os orfanatos
+  async index(req: Request, res: Response) {
+    const orphanagesRepository = getRepository(Orphanage);
+    
+    const orphanages = await orphanagesRepository.find();
+
+    return res.json(orphanages);
+  },
+
   // Criar um orfanato
   async create(req: Request, res: Response) {
     // pegando os dados separadamente
