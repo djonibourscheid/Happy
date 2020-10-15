@@ -1,0 +1,8 @@
+# dependencies
+/node_modules
+
+# uploads/images
+/uploads
+
+# database
+/src/database/database.sqlite
