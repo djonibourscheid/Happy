@@ -2,21 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FiArrowRight, FiPlus } from 'react-icons/fi';
 import { Map, TileLayer, Marker, Popup } from 'react-leaflet';
-import Leaflet from 'leaflet';
 
-import 'leaflet/dist/leaflet.css';
+
+import mapMakerImg from '../images/map-marker.svg';
+import mapIcon from '../Utils/mapIcon';
 
 import '../styles/pages/orphanages-map.css';
 
-import mapMakerImg from '../images/map-marker.svg';
-
-
-const mapIcon = Leaflet.icon({
-  iconUrl: mapMakerImg,
-  iconSize: [58, 68],
-  iconAnchor: [24, 68],
-  popupAnchor: [170, 2],
-})
 
 function OrphanagesMap() {
   return (
